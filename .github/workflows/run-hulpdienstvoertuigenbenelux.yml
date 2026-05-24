@@ -33,8 +33,10 @@ jobs:
       - name: Run script
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          DISCORD_APK: ${{ secrets.DISCORD_APK }}
         run: |
           python compare_hulpdienstvoertuigenbenelux.py
+          python apk_check.py
 
       - name: Commit and push changes
         run: |

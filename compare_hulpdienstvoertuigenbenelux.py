@@ -216,7 +216,7 @@ def main():
         for field in new:
             if field in old and new[field] != old[field]:
                 if field == 'Roepnummer':
-                    descs.append(f"'{old_roepnummer}' omgtenummerd naar '{new_roepnummer}'")
+                    descs.append(f"'{old_roepnummer}' omgenummerd naar '{new_roepnummer}'")
                 else:
                     descs.append(f"{old_roepnummer}: {field} van '{old[field]}' naar '{new[field]}' aangepast")
         return descs
