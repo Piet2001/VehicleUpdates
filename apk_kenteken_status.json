@@ -69631,5 +69631,41 @@
       "ONBEKEND"
     ],
     "last_check_date": "2026-05-25"
+  },
+  "BB-FJ-25": {
+    "expiry": "2027-03-14",
+    "checked": true,
+    "unknown": false,
+    "roepnummers": [
+      "ONBEKEND"
+    ],
+    "last_check_date": "2026-05-25"
+  },
+  "59-BL-FG": {
+    "expiry": "2026-07-13",
+    "checked": true,
+    "unknown": false,
+    "roepnummers": [
+      "ONBEKEND"
+    ],
+    "last_check_date": "2026-05-25"
+  },
+  "FTP-26-B": {
+    "expiry": "None",
+    "checked": true,
+    "unknown": true,
+    "roepnummers": [
+      "ONBEKEND"
+    ],
+    "last_check_date": "2026-05-25"
+  },
+  "BZ-TP-56": {
+    "expiry": "2026-07-15",
+    "checked": true,
+    "unknown": false,
+    "roepnummers": [
+      "ONBEKEND"
+    ],
+    "last_check_date": "2026-05-25"
   }
 }

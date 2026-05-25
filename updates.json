@@ -127,6 +127,30 @@
         "Regio": "17",
         "Description": "HBC1 BMH-BBM toegevoegd aan Bedrijfsbrandweer Shell Pernis",
         "Time": "25-05-2026 16:59:16"
+      },
+      {
+        "Hulpdienst": "Brandweer",
+        "Regio": "1",
+        "Description": "ONBEKEND TS-BB toegevoegd aan Bedrijfsbrandweer Hoogkerk",
+        "Time": "25-05-2026 18:00:11"
+      },
+      {
+        "Hulpdienst": "Brandweer",
+        "Regio": "1",
+        "Description": "ONBEKEND GM toegevoegd aan Bedrijfsbrandweer Groningen",
+        "Time": "25-05-2026 18:00:11"
+      },
+      {
+        "Hulpdienst": "Brandweer",
+        "Regio": "9",
+        "Description": "ONBEKEND BRM toegevoegd aan Bedrijfsbrandweer Utrecht",
+        "Time": "25-05-2026 18:00:11"
+      },
+      {
+        "Hulpdienst": "Brandweer",
+        "Regio": "23",
+        "Description": "ONBEKEND TS-BB toegevoegd aan Bedrijfsbrandweer Weert",
+        "Time": "25-05-2026 18:00:11"
       }
     ],
     "removed": [
