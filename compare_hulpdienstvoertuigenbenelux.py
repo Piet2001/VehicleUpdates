@@ -106,20 +106,19 @@ def compare_json(old: Any, new: Any) -> dict:
     old = [normalize_dict(item) for item in old]
     new = [normalize_dict(item) for item in new]
 
-    key = None
-    candidate_keys = ['Roepnummer', 'Kenteken', 'id', 'nummerplaat', 'license', 'license_plate']
-    for k in candidate_keys:
-        if old and k in old[0]:
-            key = k
-            break
-        if new and k in new[0]:
-            key = k
-            break
-    if not key:
-        raise ValueError("Could not determine a unique key for comparison.")
+    def get_unique_id(item):
+        roep = item.get('Roepnummer', '').strip().upper()
+        kenteken = item.get('Kenteken', '').strip().upper()
+        if roep in ['GEEN', 'ONBEKEND', '-'] and is_valid_kenteken(kenteken):
+            return f"KENTEKEN:{kenteken}"
+        elif roep:
+            return f"ROEPNUMMER:{roep}"
+        elif is_valid_kenteken(kenteken):
+            return f"KENTEKEN:{kenteken}"
+        return None
 
-    old_dict = {item[key]: item for item in old if key in item and item[key]}
-    new_dict = {item[key]: item for item in new if key in item and item[key]}
+    old_dict = {get_unique_id(item): item for item in old if get_unique_id(item)}
+    new_dict = {get_unique_id(item): item for item in new if get_unique_id(item)}
 
     added = [new_dict[k] for k in new_dict if k not in old_dict]
     removed = [old_dict[k] for k in old_dict if k not in new_dict]
@@ -129,17 +128,28 @@ def compare_json(old: Any, new: Any) -> dict:
     ]
 
     # Detect Roepnummer changes by checking if a removed Roepnummer's Kenteken still exists in the new data with a different Roepnummer
+
+    # Fallback for removals: if Roepnummer is ONBEKEND/GEEN, use Kenteken to match
     removed_copy = removed[:]
     added_copy = added[:]
-    kenteken_to_new = {item.get('Kenteken', '').strip(): item for item in new}
-    kenteken_to_old = {item.get('Kenteken', '').strip(): item for item in old}
+    kenteken_to_new = {item.get('Kenteken', '').strip().upper(): item for item in new}
+    kenteken_to_old = {item.get('Kenteken', '').strip().upper(): item for item in old}
     for old_item in removed_copy:
-        kenteken = old_item.get('Kenteken', '').strip()
+        roep = old_item.get('Roepnummer', '').strip().upper()
+        kenteken = old_item.get('Kenteken', '').strip().upper()
         if not is_valid_kenteken(kenteken):
             continue
-        if kenteken and kenteken in kenteken_to_new:
+        if roep in ['GEEN', 'ONBEKEND', '-'] and kenteken in kenteken_to_new:
             new_item = kenteken_to_new[kenteken]
             # Only treat as a Roepnummer change if Roepnummer is different
+            if old_item.get('Roepnummer', '').strip() != new_item.get('Roepnummer', '').strip():
+                changed.append({'key': f"{old_item.get('Roepnummer','')}->{new_item.get('Roepnummer','')}", 'old': old_item, 'new': new_item})
+                if old_item in removed:
+                    removed.remove(old_item)
+                if new_item in added:
+                    added.remove(new_item)
+        elif kenteken in kenteken_to_new:
+            new_item = kenteken_to_new[kenteken]
             if old_item.get('Roepnummer', '').strip() != new_item.get('Roepnummer', '').strip():
                 changed.append({'key': f"{old_item.get('Roepnummer','')}->{new_item.get('Roepnummer','')}", 'old': old_item, 'new': new_item})
                 if old_item in removed:
