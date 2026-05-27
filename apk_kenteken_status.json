@@ -19348,15 +19348,6 @@
     ],
     "last_check_date": "2026-05-24"
   },
-  "BV-HB-15": {
-    "expiry": null,
-    "checked": true,
-    "unknown": true,
-    "roepnummers": [
-      "09-8052"
-    ],
-    "last_check_date": "2026-05-27"
-  },
   "53-ZVV-6": {
     "expiry": "2026-11-06",
     "checked": true,
@@ -19578,6 +19569,7 @@
     "checked": true,
     "unknown": false,
     "roepnummers": [
+      "09-5532",
       "09-6232"
     ],
     "last_check_date": "2026-05-24"
@@ -25807,6 +25799,7 @@
     "checked": true,
     "unknown": false,
     "roepnummers": [
+      "13-9185",
       "13-9301"
     ],
     "last_check_date": "2026-05-24"
@@ -28167,15 +28160,6 @@
     "unknown": false,
     "roepnummers": [
       "15-9600"
-    ],
-    "last_check_date": "2026-05-27"
-  },
-  "XH-095-S": {
-    "expiry": "2026-02-27",
-    "checked": true,
-    "unknown": false,
-    "roepnummers": [
-      "15-9601"
     ],
     "last_check_date": "2026-05-27"
   },
@@ -44906,15 +44890,6 @@
     ],
     "last_check_date": "2026-05-24"
   },
-  "VG-622-N": {
-    "expiry": "2025-12-13",
-    "checked": true,
-    "unknown": false,
-    "roepnummers": [
-      "23-3269"
-    ],
-    "last_check_date": "2026-05-27"
-  },
   "V-77-FNZ": {
     "expiry": "2027-05-29",
     "checked": true,
@@ -55444,15 +55419,6 @@
     "unknown": false,
     "roepnummers": [
       "10-117"
-    ],
-    "last_check_date": "2026-05-24"
-  },
-  "1-XNF-94": {
-    "expiry": "2026-10-09",
-    "checked": true,
-    "unknown": false,
-    "roepnummers": [
-      "10-344"
     ],
     "last_check_date": "2026-05-24"
   },
@@ -69394,7 +69360,7 @@
     "checked": true,
     "unknown": false,
     "roepnummers": [
-      "09-5532"
+      "09-8052"
     ],
     "last_check_date": "2026-05-24"
   },
@@ -69667,5 +69633,14 @@
       "ONBEKEND"
     ],
     "last_check_date": "2026-05-25"
+  },
+  "JTG-50-B": {
+    "expiry": "2030-04-01",
+    "checked": true,
+    "unknown": false,
+    "roepnummers": [
+      "10-344"
+    ],
+    "last_check_date": "2026-05-27"
   }
 }
