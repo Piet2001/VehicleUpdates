@@ -1,4 +1,4 @@
-Expired (84):
+Expired (82):
 1-KKF-11 (06-345): verlopen op 2024-05-27
 1-VPJ-15 (19-6502, RSG240): verlopen op 2022-07-10
 12-BVR-4 (01-3050): verlopen op 2026-05-26
@@ -78,10 +78,8 @@ V-539-RN (36-6460): verlopen op 2024-09-13
 VD-386-P (ONBEKEND): verlopen op 2025-07-11
 VG-348-P (19-4702): verlopen op 2025-10-13
 VG-611-N (23-2679): verlopen op 2025-12-13
-VH-561-G (ONBEKEND): verlopen op 2025-11-06
 VK-294-T (17-8702): verlopen op 2025-11-28
 VN-778-R (07-DA002): verlopen op 2026-05-26
-VS-598-B (ONBEKEND): verlopen op 2025-12-23
 VX-25-NJ (01-3981): verlopen op 2025-02-11
 
 Unknown (998):

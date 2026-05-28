@@ -67736,15 +67736,6 @@
     ],
     "last_check_date": "2026-05-24"
   },
-  "VH-561-G": {
-    "expiry": "2025-11-06",
-    "checked": true,
-    "unknown": false,
-    "roepnummers": [
-      "ONBEKEND"
-    ],
-    "last_check_date": "2026-05-28"
-  },
   "VFK-06-X": {
     "expiry": "2027-03-18",
     "checked": true,
@@ -67807,15 +67798,6 @@
       "ONBEKEND"
     ],
     "last_check_date": "2026-05-24"
-  },
-  "VS-598-B": {
-    "expiry": "2025-12-23",
-    "checked": true,
-    "unknown": false,
-    "roepnummers": [
-      "ONBEKEND"
-    ],
-    "last_check_date": "2026-05-28"
   },
   "V-63-DTX": {
     "expiry": "2027-03-21",
@@ -69753,6 +69735,60 @@
   },
   "BT-HL-62": {
     "expiry": "2026-09-27",
+    "checked": true,
+    "unknown": false,
+    "roepnummers": [
+      "GEEN"
+    ],
+    "last_check_date": "2026-05-28"
+  },
+  "BB-643-N": {
+    "expiry": "2026-08-01",
+    "checked": true,
+    "unknown": false,
+    "roepnummers": [
+      "02-6946"
+    ],
+    "last_check_date": "2026-05-28"
+  },
+  "BV-FG-22": {
+    "expiry": "2027-06-25",
+    "checked": true,
+    "unknown": false,
+    "roepnummers": [
+      "GEEN"
+    ],
+    "last_check_date": "2026-05-28"
+  },
+  "BL-HF-28": {
+    "expiry": "2026-10-20",
+    "checked": true,
+    "unknown": false,
+    "roepnummers": [
+      "GEEN"
+    ],
+    "last_check_date": "2026-05-28"
+  },
+  "BX-VG-38": {
+    "expiry": "2027-01-18",
+    "checked": true,
+    "unknown": false,
+    "roepnummers": [
+      "GEEN"
+    ],
+    "last_check_date": "2026-05-28"
+  },
+  "BX-LH-88": {
+    "expiry": "2027-06-02",
+    "checked": true,
+    "unknown": false,
+    "roepnummers": [
+      "GEEN"
+    ],
+    "last_check_date": "2026-05-28"
+  },
+  "40-BNV-9": {
+    "expiry": "2026-10-18",
     "checked": true,
     "unknown": false,
     "roepnummers": [
