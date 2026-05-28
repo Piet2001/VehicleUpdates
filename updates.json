@@ -1,54 +1,5 @@
 [
   {
-    "date": "2026-05-28",
-    "added": [],
-    "removed": [],
-    "changed": [
-      {
-        "Hulpdienst": "Ziekenhuizen",
-        "Regio": "9",
-        "Description": "Ziekenhuis: Afkorting van 'UMC Utrecht' naar 'Zaans Medisch Centrum' aangepast",
-        "Time": "28-05-2026 10:00:16"
-      },
-      {
-        "Hulpdienst": "Ziekenhuizen",
-        "Regio": "9",
-        "Description": "Ziekenhuis: TypeVoertuig van 'Heidelberglaan 100, Utrecht' naar 'Koningin Julianaplein 58, Zaandam' aangepast",
-        "Time": "28-05-2026 10:00:16"
-      },
-      {
-        "Hulpdienst": "Ziekenhuizen",
-        "Regio": "9",
-        "Description": "Ziekenhuis: Kenteken van 'Dit ziekenhuis heeft: 1042 Bedden' naar 'Dit ziekenhuis heeft: 318 Bedden' aangepast",
-        "Time": "28-05-2026 10:00:16"
-      },
-      {
-        "Hulpdienst": "Ziekenhuizen",
-        "Regio": "9",
-        "Description": "Ziekenhuis: Regio van '9' naar '11' aangepast",
-        "Time": "28-05-2026 10:00:16"
-      },
-      {
-        "Hulpdienst": "Ziekenhuizen",
-        "Regio": "9",
-        "Description": "Buitenpolikliniek: Afkorting van 'Meander Medisch Centrum Baarn' naar 'Zaans Medisch Centrum Polikliniek Saendelft' aangepast",
-        "Time": "28-05-2026 10:00:16"
-      },
-      {
-        "Hulpdienst": "Ziekenhuizen",
-        "Regio": "9",
-        "Description": "Buitenpolikliniek: TypeVoertuig van 'Molenweg 2, Baarn' naar 'Kaaikhof 69, Assendelft' aangepast",
-        "Time": "28-05-2026 10:00:16"
-      },
-      {
-        "Hulpdienst": "Ziekenhuizen",
-        "Regio": "9",
-        "Description": "Buitenpolikliniek: Regio van '9' naar '11' aangepast",
-        "Time": "28-05-2026 10:00:16"
-      }
-    ]
-  },
-  {
     "date": "2026-05-27",
     "added": [
       {
