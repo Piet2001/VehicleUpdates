@@ -221,13 +221,19 @@ def main():
     url = "https://hulpdienstvoertuigenbenelux.nl/fetch-sheet?region=NL"
     local_file = "hulpdienstvoertuigenbenelux_raw.json"
 
+
     print("Downloading latest JSON...")
     new_json = download_json(url)
     print(f"Loaded {len(new_json)} records from online.")
+    # Filter out unwanted Hulpdienst categories
+    exclude_hulpdiensten = {"ziekenhuizen", "penitentiaire inrichting", "hulpdienst", "alle hulpdiensten"}
+    new_json = [item for item in new_json if item.get('Hulpdienst', '').strip().lower() not in exclude_hulpdiensten]
 
     print("Loading local JSON...")
     old_json = load_local_json(local_file)
     print(f"Loaded {len(old_json)} records from local file.")
+    # Filter out unwanted Hulpdienst categories
+    old_json = [item for item in old_json if item.get('Hulpdienst', '').strip().lower() not in exclude_hulpdiensten]
 
 
 
