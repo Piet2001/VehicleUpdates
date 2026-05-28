@@ -69651,5 +69651,50 @@
       "GEEN"
     ],
     "last_check_date": "2026-05-27"
+  },
+  "Dit ziekenhuis heeft: 659 Bedden": {
+    "expiry": null,
+    "checked": true,
+    "unknown": true,
+    "roepnummers": [
+      "Ziekenhuis"
+    ],
+    "last_check_date": "2026-05-28"
+  },
+  "Dit ziekenhuis heeft: 165 Bedden": {
+    "expiry": null,
+    "checked": true,
+    "unknown": true,
+    "roepnummers": [
+      "Ziekenhuis"
+    ],
+    "last_check_date": "2026-05-28"
+  },
+  "Dit ziekenhuis heeft: 506 Bedden": {
+    "expiry": null,
+    "checked": true,
+    "unknown": true,
+    "roepnummers": [
+      "Ziekenhuis"
+    ],
+    "last_check_date": "2026-05-28"
+  },
+  "Dit ziekenhuis heeft: 359 Bedden": {
+    "expiry": null,
+    "checked": true,
+    "unknown": true,
+    "roepnummers": [
+      "Ziekenhuis"
+    ],
+    "last_check_date": "2026-05-28"
+  },
+  "Dit ziekenhuis heeft: 318 Bedden": {
+    "expiry": null,
+    "checked": true,
+    "unknown": true,
+    "roepnummers": [
+      "Ziekenhuis"
+    ],
+    "last_check_date": "2026-05-28"
   }
 }
