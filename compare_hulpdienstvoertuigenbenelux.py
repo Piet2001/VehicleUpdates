@@ -241,13 +241,13 @@ def main():
     print(f"Loaded {len(new_json)} records from online.")
     # Filter out unwanted Hulpdienst categories
     exclude_hulpdiensten = {"ziekenhuizen", "penitentiaire inrichting", "hulpdienst", "alle hulpdiensten"}
-    new_json = [item for item in new_json if item.get('Hulpdienst', '').strip().lower() not in exclude_hulpdiensten]
+    compare_new_json = [item for item in new_json if item.get('Hulpdienst', '').strip().lower() not in exclude_hulpdiensten]
 
     print("Loading local JSON...")
     old_json = load_local_json(local_file)
     print(f"Loaded {len(old_json)} records from local file.")
     # Filter out unwanted Hulpdienst categories
-    old_json = [item for item in old_json if item.get('Hulpdienst', '').strip().lower() not in exclude_hulpdiensten]
+    compare_old_json = [item for item in old_json if item.get('Hulpdienst', '').strip().lower() not in exclude_hulpdiensten]
 
 
 
@@ -255,7 +255,7 @@ def main():
         print(msg)
 
     log("Comparing...")
-    result = compare_json(old_json, new_json)
+    result = compare_json(compare_old_json, compare_new_json)
     log(f"Added: {len(result['added'])}")
     log(f"Removed: {len(result['removed'])}")
     log(f"Changed: {len(result['changed'])}")
