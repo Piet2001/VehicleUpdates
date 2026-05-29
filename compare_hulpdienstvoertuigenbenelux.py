@@ -264,7 +264,10 @@ def main():
             "color": color,
             "timestamp": datetime.datetime.now(datetime.UTC).isoformat()
         }
-        data = {"embeds": [embed]}
+        data = {
+            "username": "[NL] HulpdienstVoertuigenBeNeLux",
+            "embeds": [embed]
+        }
         try:
             response = requests.post(DISCORD_WEBHOOK_URL, json=data)
             if response.status_code >= 400:

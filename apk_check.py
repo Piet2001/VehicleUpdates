@@ -85,7 +85,7 @@ def webhook_APK(message):
         "color": color,
     }
     webhookdata = {
-        "username": "APK Monitor",
+        "username": "HulpdienstVoertuigenBeNeLux APK",
         "embeds": [
             embed
         ],
