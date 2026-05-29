@@ -7092,15 +7092,6 @@
     ],
     "last_check_date": "2026-05-24"
   },
-  "BN-TZ-43": {
-    "expiry": "2025-05-12",
-    "checked": true,
-    "unknown": false,
-    "roepnummers": [
-      "04-1037"
-    ],
-    "last_check_date": "2026-05-29"
-  },
   "81-BPS-7": {
     "expiry": "2026-08-25",
     "checked": true,
@@ -20515,6 +20506,7 @@
     "checked": true,
     "unknown": false,
     "roepnummers": [
+      "10-6835",
       "10-7031"
     ],
     "last_check_date": "2026-05-24"
@@ -20860,15 +20852,6 @@
       "10-4531"
     ],
     "last_check_date": "2026-05-24"
-  },
-  "BT-GD-08": {
-    "expiry": "2025-08-28",
-    "checked": true,
-    "unknown": false,
-    "roepnummers": [
-      "10-6835"
-    ],
-    "last_check_date": "2026-05-29"
   },
   "VHX-92-N": {
     "expiry": "2027-01-06",
