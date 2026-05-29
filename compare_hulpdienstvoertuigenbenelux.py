@@ -107,11 +107,27 @@ def compare_json(old: Any, new: Any) -> dict:
     new = [normalize_dict(item) for item in new]
 
     def get_unique_id(item):
+        hulpdienst = item.get('Hulpdienst', '').strip().lower()
         roep = item.get('Roepnummer', '').strip().upper()
         afkorting = item.get('Afkorting', '').strip().upper()
         type_voertuig = item.get('TypeVoertuig', '').strip().upper()
         kenteken = item.get('Kenteken', '').strip().upper()
         adres = item.get('Adres', '').strip().upper()
+
+        # Ziekenhuizen use Afkorting as unique key, with TypeVoertuig as fallback.
+        if hulpdienst == 'ziekenhuizen':
+            if afkorting:
+                return f"ZIEKENHUIZEN_AFKORTING:{afkorting}"
+            elif type_voertuig:
+                return f"ZIEKENHUIZEN_TYPEVOERTUIG:{type_voertuig}"
+            return None
+
+        # Penitentiaire Inrichting uses TypeVoertuig as unique key.
+        if hulpdienst == 'penitentiaire inrichting':
+            if type_voertuig:
+                return f"PENITENTIAIRE_INRICHTING_TYPEVOERTUIG:{type_voertuig}"
+            return None
+
         all_key_fields_empty = not roep and not afkorting and not type_voertuig and not kenteken
         if roep and roep not in ['GEEN', 'ONBEKEND', '-']:
             return f"ROEPNUMMER:{roep}"
@@ -139,12 +155,31 @@ def compare_json(old: Any, new: Any) -> dict:
     kenteken_to_new = {item.get('Kenteken', '').strip().upper(): item for item in new}
     kenteken_to_old = {item.get('Kenteken', '').strip().upper(): item for item in old}
     for old_item in removed_copy:
+        hulpdienst = old_item.get('Hulpdienst', '').strip().lower()
         roep = old_item.get('Roepnummer', '').strip().upper()
         afkorting = old_item.get('Afkorting', '').strip().upper()
         type_voertuig = old_item.get('TypeVoertuig', '').strip().upper()
         kenteken = old_item.get('Kenteken', '').strip().upper()
         adres = old_item.get('Adres', '').strip().upper()
         all_key_fields_empty = not roep and not afkorting and not type_voertuig and not kenteken
+
+        if hulpdienst == 'ziekenhuizen':
+            new_item = None
+            if afkorting:
+                afkorting_to_new = {item.get('Afkorting', '').strip().upper(): item for item in new if item.get('Hulpdienst', '').strip().lower() == 'ziekenhuizen'}
+                new_item = afkorting_to_new.get(afkorting)
+            if not new_item and type_voertuig:
+                type_to_new = {item.get('TypeVoertuig', '').strip().upper(): item for item in new if item.get('Hulpdienst', '').strip().lower() == 'ziekenhuizen'}
+                new_item = type_to_new.get(type_voertuig)
+
+            if new_item and old_item != new_item:
+                changed.append({'key': f"{old_item.get('Afkorting','')}->{new_item.get('Afkorting','')}", 'old': old_item, 'new': new_item})
+                if old_item in removed:
+                    removed.remove(old_item)
+                if new_item in added:
+                    added.remove(new_item)
+            continue
+
         # If Roepnummer is invalid
         if roep in ['GEEN', 'ONBEKEND', '-']:
             # If Kenteken is valid, try to match by Kenteken
@@ -246,7 +281,7 @@ def main():
     new_json = download_json(url)
     print(f"Loaded {len(new_json)} records from online.")
     # Filter out unwanted Hulpdienst categories
-    exclude_hulpdiensten = {"ziekenhuizen", "penitentiaire inrichting", "hulpdienst", "alle hulpdiensten"}
+    exclude_hulpdiensten = {"hulpdienst", "alle hulpdiensten"}
     compare_new_json = [item for item in new_json if item.get('Hulpdienst', '').strip().lower() not in exclude_hulpdiensten]
 
     print("Loading local JSON...")
