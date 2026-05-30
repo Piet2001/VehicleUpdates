@@ -69417,5 +69417,32 @@
       "Test"
     ],
     "last_check_date": "2026-05-30"
+  },
+  "Dit ziekenhuis heeft: 120 Bedden": {
+    "expiry": null,
+    "checked": true,
+    "unknown": true,
+    "roepnummers": [
+      "Kinderziekenhuis"
+    ],
+    "last_check_date": "2026-05-30"
+  },
+  "Dit ziekenhuis heeft: 450 Bedden": {
+    "expiry": null,
+    "checked": true,
+    "unknown": true,
+    "roepnummers": [
+      "Ziekenhuis"
+    ],
+    "last_check_date": "2026-05-30"
+  },
+  "Dit ziekenhuis heeft: 230 Bedden": {
+    "expiry": null,
+    "checked": true,
+    "unknown": true,
+    "roepnummers": [
+      "Ziekenhuis"
+    ],
+    "last_check_date": "2026-05-30"
   }
 }

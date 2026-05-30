@@ -78,7 +78,7 @@ VN-778-R (07-DA002): verlopen op 2026-05-26
 VX-25-NJ (01-3981): verlopen op 2025-02-11
 Z-692-RH (20-142): verlopen op 2026-05-29
 
-Unknown (956):
+Unknown (959):
 "t Span (35-7702)
 0-YH-635 (36-6359)
 0-YH-818 (36-2739)
@@ -610,6 +610,9 @@ De Arend (35-7752)
 De Beer (35-7732)
 De Gooier (35-7753)
 Districts Post (KM02.00, KM02.10, KM02.26, KM02.28, KM02.30, KM02.32, KM03.00, KM03.09, KM03.12, KM03.15, KM03.90, KM04.00, KM04.30, KM04.50, KM04.55, KM04.58, KM04.62, KM04.66, KM04.70, KM04.72, KM04.74, KM05.00, KM05.06, KM05.08, KM05.10, KM05.13, KM05.15, KM05.20, KM05.40, KM05.50, KM11.00, KM12.00, KM13.00, KM14.00, KM15.00, KM16.00, KM21.00, KM22.00, KM23.00, KM24.00, KM25.00, KM26.00, KM31.00, KM32.00, KM41.00, KM42.00, KM43.00)
+Dit ziekenhuis heeft: 120 Bedden (Kinderziekenhuis)
+Dit ziekenhuis heeft: 230 Bedden (Ziekenhuis)
+Dit ziekenhuis heeft: 450 Bedden (Ziekenhuis)
 Dolfijn (GEEN)
 Donateur (35-7241)
 Doorlaat post (KM12.70, KM21.60, KM22.60, KM22.70, KM31.00, KM32.70, KM41.70, KM52.60, KM58.00)
