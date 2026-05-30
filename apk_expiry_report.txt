@@ -29,7 +29,6 @@ Expired (78):
 92-VFF-2 (15-6983): verlopen op 2024-10-12
 93-VFF-2 (15-6783): verlopen op 2026-03-19
 BH-RR-85 (19-8038): verlopen op 2025-10-19
-BJ-FH-45 (06-7035): verlopen op 2026-05-17
 BJ-LF-46 (19-8031): verlopen op 2025-05-31
 BJ-PJ-95 (21-0042): verlopen op 2025-09-27
 BJ-ZL-03 (21-0043): verlopen op 2025-09-24
@@ -77,6 +76,7 @@ VG-611-N (23-2679): verlopen op 2025-12-13
 VK-294-T (17-8702): verlopen op 2025-11-28
 VN-778-R (07-DA002): verlopen op 2026-05-26
 VX-25-NJ (01-3981): verlopen op 2025-02-11
+Z-692-RH (20-142): verlopen op 2026-05-29
 
 Unknown (955):
 "t Span (35-7702)
